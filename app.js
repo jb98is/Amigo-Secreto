@@ -3,18 +3,17 @@
   let listaAmigos =[];
 
 //mostrar Parrafo
-   function mostrarP(texto) {
+function mostrarP(texto) {
     let text = document.querySelector("p");
     text.innerHTML =texto;
-  }
+}
  //boton agregarAmigo 
 function agregarAmigo(){
-  let amigo = document.querySelector("#amigo").value;
-  listaAmigos.push(amigo);
-  document.querySelector("#amigo").value="";
-  mostrarP(listaAmigos);
+    let amigo = document.querySelector("#amigo").value;
+    listaAmigos.push(amigo);
+    document.querySelector("#amigo").value="";
+    mostrarP(listaAmigos);     
 }
- 
 //boton sortearAmigo
 function sortearAmigo(){
     mostrarP("");
