@@ -1,20 +1,32 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
   let listaAmigos =[];
-function agregarAmigo(){
- 
-  let amigo = document.querySelector("#amigo").value;
   let c=0;
-  
-  function mostrarP(texto,m) {
-    let text = document.querySelector(m);
+
+//mostrar Parrafo
+   function mostrarP(texto) {
+    let text = document.querySelector("p");
     text.innerHTML =texto;
   }
+ //boton agregarAmigo 
+function agregarAmigo(){
+  let amigo = document.querySelector("#amigo").value;
+
   function guardarAmigos(amigo){
     listaAmigos.push(amigo);
     c++;
-    mostrarP(listaAmigos,"p");
+    mostrarP(listaAmigos);
   }
-  
+   document.querySelector("#amigo").value="";
   guardarAmigos(amigo);
+}
+
+//boton sortearAmigo
+function sortearAmigo(){
+    mostrarP("");
+    let num= Math.floor(Math.random()*listaAmigos.length);
+    let amgSC =listaAmigos[num];
+    mostrarP(amgSC);
+    listaAmigos=[];
+    
 }
