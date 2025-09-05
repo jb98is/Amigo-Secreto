@@ -11,16 +11,11 @@
  //boton agregarAmigo 
 function agregarAmigo(){
   let amigo = document.querySelector("#amigo").value;
-
-  function guardarAmigos(amigo){
-    listaAmigos.push(amigo);
-    c++;
-    mostrarP(listaAmigos);
-  }
-   document.querySelector("#amigo").value="";
-  guardarAmigos(amigo);
+  listaAmigos.push(amigo);
+  document.querySelector("#amigo").value="";
+  mostrarP(listaAmigos);
 }
-
+ 
 //boton sortearAmigo
 function sortearAmigo(){
     mostrarP("");
