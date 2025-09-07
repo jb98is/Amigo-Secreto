@@ -3,14 +3,14 @@
   let listaAmigos =[];
 
 //mostrar Parrafo
-function mostrarP(texto) {
-    let text = document.querySelector("p");
+function mostrarP(texto,lugar) {
+    let text = document.querySelector(lugar);
     text.innerHTML =texto;
 }
  //boton agregarAmigo 
 function agregarAmigo(){
    let amigo = document.querySelector("#amigo").value;
-   if(estaraVacio(amigo)){mostrarP("Esta vacio,añade un nombre o apodo de tu amigo,por favor");}
+   if(estaraVacio(amigo)){mostrarP("Esta vacio,añade un nombre o apodo de tu amigo,por favor","p");}
    else{añadirAmigo(amigo);}
    //estaraVacio(amigo);
 }
@@ -21,14 +21,14 @@ function estaraVacio(texto) {
 function añadirAmigo(amigo) {
    listaAmigos.push(amigo);
     document.querySelector("#amigo").value="";
-    mostrarP(listaAmigos); 
+    mostrarP(listaAmigos,"p"); 
 }
 //boton sortearAmigo
 function sortearAmigo(){
-    mostrarP("");
+    mostrarP("","p");
     let num= Math.floor(Math.random()*listaAmigos.length);
     let amgSC =listaAmigos[num];
-    mostrarP(`Tu Amigo SECRETO es: ${amgSC}`);
+    mostrarP(`Tu Amigo SECRETO es: ${amgSC}`,"h3");
     //listaAmigos=[];
     
 }
