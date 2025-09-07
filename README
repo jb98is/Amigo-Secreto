@@ -4,7 +4,7 @@ al final 'al azar' de tus amigos se elegira a tu amigo secreto.
 
 -Al poner a tu amigos tiene que ser en una lista-
 -De esa lista se sacara a tus amigo secreto-
--tienes que crear 2 botones-
+-tienes que crear 2 funciones por los 2 botones-
 -El 1er boton 'añadir' para agregar a tus amigos en una lista-
 -una lista que mostraras en pantalla -
 -El 2do boton 'Sortear Amigo' donde se elegira a tu AMIGO SECRETO.-
