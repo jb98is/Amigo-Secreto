@@ -9,10 +9,19 @@ function mostrarP(texto) {
 }
  //boton agregarAmigo 
 function agregarAmigo(){
-    let amigo = document.querySelector("#amigo").value;
-    listaAmigos.push(amigo);
+   let amigo = document.querySelector("#amigo").value;
+   if(estaraVacio(amigo)){mostrarP("Esta vacio,añade un nombre o apodo de tu amigo,por favor");}
+   else{añadirAmigo(amigo);}
+   //estaraVacio(amigo);
+}
+function estaraVacio(texto) {
+  if(texto == ""){return true;}
+  else{return false;}
+}
+function añadirAmigo(amigo) {
+   listaAmigos.push(amigo);
     document.querySelector("#amigo").value="";
-    mostrarP(listaAmigos);     
+    mostrarP(listaAmigos); 
 }
 //boton sortearAmigo
 function sortearAmigo(){
