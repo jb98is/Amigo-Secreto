@@ -27,7 +27,7 @@ function añadirAmigo(amigo) {
 function sortearAmigo(){
     mostrarP("","p");
     let num= Math.floor(Math.random()*listaAmigos.length);
-    let amgSC =listaAmigos[num];
+    let amgSC = listaAmigos[num].toUpperCase();
     mostrarP(`Tu Amigo SECRETO es: ${amgSC}`,"h3");
     listaAmigos=[];
     
