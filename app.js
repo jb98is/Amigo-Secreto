@@ -14,10 +14,12 @@ function agregarAmigo(){
    else{añadirAmigo(amigo);}
    //estaraVacio(amigo);
 }
+//compruea si esta vacio
 function estaraVacio(texto) {
   if(texto == ""){return true;}
   else{return false;}
 }
+//añade el amigo
 function añadirAmigo(amigo) {
    listaAmigos.push(amigo);
     document.querySelector("#amigo").value="";
