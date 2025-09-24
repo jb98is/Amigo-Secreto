@@ -11,7 +11,8 @@ function mostrarP(texto,lugar) {
 function agregarAmigo(){
    let amigo = document.querySelector("#amigo").value;
    if(estaraVacio(amigo)){mostrarP("Esta vacio,añade un nombre o apodo de tu amigo,por favor","p");}
-   else{añadirAmigo(amigo);}
+   else if(nombreRepetido(amigo)){mostrarP("El nombre ya esta en la lista","p");}
+   else{ añadirAmigo(amigo);}
    //estaraVacio(amigo);
 }
 //compruea si esta vacio
