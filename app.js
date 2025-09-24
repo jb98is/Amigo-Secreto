@@ -19,6 +19,15 @@ function estaraVacio(texto) {
   if(texto == ""){return true;}
   else{return false;}
 }
+//comprueba si hay un nombre repetido
+function nombreRepetido(amigo) {
+  for (let i = 0; i < listaAmigos.length; i++) {
+    let L= listaAmigos[i]; 
+     if (amigo.toUpperCase()=== L.toUpperCase()){return true;}
+  }
+  return false;
+  
+}
 //añade el amigo
 function añadirAmigo(amigo) {
    listaAmigos.push(amigo);
